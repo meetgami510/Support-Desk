@@ -52,6 +52,7 @@ const getTicket = asyncHandler(async (req,res)=> {
 //@route POST   /api/tickets
 //@access Private
 const createTickets = asyncHandler(async (req,res)=> {
+    console.log(req.body);
     const {product,description} = req.body;
     if(!product || !description) {
         throw new Error('please product and description');
