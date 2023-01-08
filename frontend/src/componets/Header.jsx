@@ -28,16 +28,16 @@ function Header() {
         ) 
         : ( 
         <>
-          <li>
+            <li>
               <Link to='/login'>
-                  <FaSignInAlt/>Login 
+                <FaSignInAlt /> Login
               </Link>
-          </li>
-          <li>
+            </li>
+            <li>
               <Link to='/register'>
-                  <FaUser/>Register
+                <FaUser /> Register
               </Link>
-          </li>
+            </li>
         </>
       )}
 

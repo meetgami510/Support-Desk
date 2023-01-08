@@ -23,6 +23,7 @@ app.get('/',(req,res)=>{
 
 //Routes
 app.use('/api/users',require('./routes/userRoutes.js'));
+app.use('/api/tickets',require('./routes/ticketRoutes'))
 //if any type of error occure in out routes so that call the errorHandler .
 
 

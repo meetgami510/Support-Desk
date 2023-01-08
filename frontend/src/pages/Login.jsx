@@ -8,7 +8,7 @@ import {useSelector,useDispatch} from 'react-redux'
 import {login,reset} from '../features/auth/authSlice'
 import Spinner from '../componets/Spinner'
 
-function Login() {
+function Login({setUser}) {
 
     const [formData,setFormData] = useState({
         email:'',
@@ -28,6 +28,7 @@ function Login() {
         }
         //Redirect when logged in
         if(isSuccess || user) {
+            setUser(user);
             navigate('/');
         }
         dispatch(reset());

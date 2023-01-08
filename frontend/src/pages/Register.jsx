@@ -8,7 +8,7 @@ import {useSelector,useDispatch} from 'react-redux'
 import {register,reset} from '../features/auth/authSlice'
 import Spinner from '../componets/Spinner'
 
-function Register() {
+function Register({setUser}) {
     
     const [formData,setFormData] = useState({
         name:'',
@@ -33,6 +33,7 @@ function Register() {
 
         if(isSuccess || user) {
             console.log(user);
+            setUser(user);
             navigate('/');
         }
         dispatch(reset());

@@ -6,23 +6,26 @@ import Register from './Register';
 
 
 
-function Home() {
+function Home({user}) {
+  var ss;
+  ss = user==null ? "HOME PAGE" : "Hey " + user.name;
   
   return (
     <>
     
       <section className="heading">
+      
         
-        <h1>Home Page {}</h1>
+        <h1>{ss}</h1>
         
       </section>
 
-      {/* <Link to='/new-ticket' className='btn btn-reverse btn-block'>
+      <Link to='/new-ticket' className='btn btn-reverse btn-block'>
         <FaQuestionCircle/> Create New Ticket
       </Link>
       <Link to='/tickets' className='btn btn-block'>
         <FaTicketAlt/> View My Ticket
-      </Link> */}
+      </Link>
     </>
   )
 }
