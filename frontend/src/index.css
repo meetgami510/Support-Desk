@@ -208,8 +208,7 @@ h3 {
   font-size: 1.3rem;
 }
 
-.ticket,
-.ticket-headings {
+.ticket,.ticket-headings {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;

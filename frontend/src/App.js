@@ -5,9 +5,11 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import { ToastContainer } from 'react-toastify';
 import NewTicket from './pages/NewTicket';
+import Tickets from './pages/Tickets';
 
 import {useState} from "react";
 import PrivateRoute from './componets/PrivateRoute';
+
 
 
 function App() {
@@ -25,11 +27,14 @@ function App() {
           <Route path='/login' element={<Login setUser = {setUserStatus}/>} />
           <Route path='/register' element={<Register setUser={setUserStatus}/>} />
           <Route path='/new-ticket' element={<PrivateRoute/>} >
-            <Route path='/new-ticket' element={<NewTicket/>}></Route>
+            <Route path='/new-ticket' element={<NewTicket/>} />
+          </Route>
+          <Route path='/tickets' element={<PrivateRoute />} >
+            <Route path='/tickets' element={<Tickets />} />
           </Route>
         </Routes>
       </div>
-    </Router>
+    </Router> 
     <ToastContainer />
   </>
 }

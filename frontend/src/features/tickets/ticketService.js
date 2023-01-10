@@ -27,7 +27,7 @@ const ticketService = {
     createTicket,
     getTickets,
 }
-
+    
 export default ticketService
 
 
